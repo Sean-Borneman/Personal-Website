@@ -1,0 +1,77 @@
+.home {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.intro {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #000000;
+  border: 1px solid rgba(100, 108, 255, 0.3);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(100, 108, 255, 0.15);
+  position: relative;
+  z-index: 2;
+}
+
+.intro h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #646cff;
+}
+
+.intro-text {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.intro-description {
+  font-size: 1.1rem;
+  color: #cccccc;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.cta-button {
+  padding: 0.8rem 2rem;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.cta-button.primary {
+  background-color: #646cff;
+  color: white;
+}
+
+.cta-button.primary:hover {
+  background-color: #535bf2;
+  transform: translateY(-2px);
+}
+
+.cta-button.secondary {
+  background-color: transparent;
+  color: #646cff;
+  border: 2px solid #646cff;
+}
+
+.cta-button.secondary:hover {
+  background-color: #646cff;
+  color: white;
+  transform: translateY(-2px);
+}
