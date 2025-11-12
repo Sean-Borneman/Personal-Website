@@ -18,6 +18,53 @@ function ProjectDetail() {
     );
   }
 
+  // Render detailed content sections
+  const renderDetailedContent = () => {
+    if (!project.detailedContent || project.detailedContent.length === 0) {
+      // Fallback to simple description if no detailed content
+      return (
+        <div className="project-description">
+          <h2>About This Project</h2>
+          <p>{project.description}</p>
+        </div>
+      );
+    }
+
+    return (
+      <div className="project-detailed-content">
+        {project.detailedContent.map((section, index) => {
+          switch (section.type) {
+            case 'heading':
+              return <h2 key={index} className="content-heading">{section.content}</h2>;
+
+            case 'text':
+              return <p key={index} className="content-text">{section.content}</p>;
+
+            case 'image':
+              return (
+                <div key={index} className="content-image">
+                  <img src={section.src} alt={section.alt} />
+                  {section.caption && <p className="image-caption">{section.caption}</p>}
+                </div>
+              );
+
+            case 'list':
+              return (
+                <ul key={index} className="content-list">
+                  {section.items.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
+              );
+
+            default:
+              return null;
+          }
+        })}
+      </div>
+    );
+  };
+
   return (
     <div className="project-detail">
       <Link to="/projects" className="back-button">← Back to Projects</Link>
@@ -40,10 +87,7 @@ function ProjectDetail() {
           ))}
         </div>
 
-        <div className="project-description">
-          <h2>About This Project</h2>
-          <p>{project.description}</p>
-        </div>
+        {renderDetailedContent()}
 
         <div className="project-links-section">
           <h2>Links</h2>

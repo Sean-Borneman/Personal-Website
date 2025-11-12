@@ -166,3 +166,65 @@
   font-size: 1.1rem;
   margin-bottom: 2rem;
 }
+
+/* Detailed Content Styles */
+.project-detailed-content {
+  margin-top: 1rem;
+}
+
+.content-heading {
+  color: #646cff;
+  font-size: 1.8rem;
+  margin: 2.5rem 0 1rem 0;
+}
+
+.content-heading:first-child {
+  margin-top: 0;
+}
+
+.content-text {
+  color: #e0e0e0;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.content-image {
+  margin: 2rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(100, 108, 255, 0.2);
+}
+
+.content-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.image-caption {
+  color: #a0a0a0;
+  font-size: 0.95rem;
+  font-style: italic;
+  text-align: center;
+  padding: 1rem;
+  margin: 0;
+  background-color: rgba(100, 108, 255, 0.05);
+}
+
+.content-list {
+  color: #e0e0e0;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin: 1.5rem 0;
+  padding-left: 2rem;
+}
+
+.content-list li {
+  margin-bottom: 0.8rem;
+  padding-left: 0.5rem;
+}
+
+.content-list li::marker {
+  color: #646cff;
+}

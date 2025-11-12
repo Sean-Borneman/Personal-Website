@@ -1,5 +1,6 @@
 // Import images
 import sspAlgorithm from '../assets/projects/SSP-algorithm.png';
+import websiteImage from '../assets/projects/Website-picture.png';
 
 // Add your projects here
 export const projects = [
@@ -44,11 +45,72 @@ export const projects = [
     title: 'Personal Portfolio',
     description: 'A modern, quantum-themed portfolio website with animated background elements and responsive design.',
     shortDescription: 'Modern portfolio with quantum aesthetics',
-    image: 'https://via.placeholder.com/400x250/7c3aed/ffffff?text=Portfolio',
+    image: websiteImage,
     tags: ['React', 'Vite', 'CSS3'],
     githubUrl: 'https://github.com/yourusername/portfolio',
     liveUrl: 'https://yourportfolio.com',
     paperUrl: null,
-    date: '2024-11'
+    date: '2024-11',
+    // Detailed content with sections - each section can have text, images, lists, etc.
+    detailedContent: [
+      {
+        type: 'text',
+        content: 'This portfolio website was built from the ground up to showcase my projects and skills in a visually engaging way. The design takes inspiration from quantum computing aesthetics with animated Bloch sphere diagrams floating in the background.'
+      },
+      {
+        type: 'heading',
+        content: 'Design Philosophy'
+      },
+      {
+        type: 'text',
+        content: 'The website follows a minimalist dark theme with vibrant blue accents. Every element was carefully crafted to ensure a smooth user experience while maintaining the quantum computing theme throughout.'
+      },
+      {
+        type: 'image',
+        src: 'https://via.placeholder.com/800x400/646cff/ffffff?text=Design+Mockup',
+        alt: 'Design mockup of the portfolio',
+        caption: 'Initial design mockup showing the quantum-themed interface'
+      },
+      {
+        type: 'heading',
+        content: 'Key Features'
+      },
+      {
+        type: 'list',
+        items: [
+          'Animated quantum state visualizations using Bloch spheres',
+          'Responsive design that works on all devices',
+          'Dynamic project cards with hover effects',
+          'Smooth page transitions using React Router',
+          'Optimized performance with Vite build system'
+        ]
+      },
+      {
+        type: 'heading',
+        content: 'Technical Implementation'
+      },
+      {
+        type: 'text',
+        content: 'The background animation system generates 15 unique qubits, each with randomly generated quantum states defined by theta (polar angle) and phi (azimuthal angle). These parameters are converted to 3D Cartesian coordinates to position the state vector on the Bloch sphere surface.'
+      },
+      {
+        type: 'image',
+        src: 'https://via.placeholder.com/800x400/535bf2/ffffff?text=Component+Architecture',
+        alt: 'Component architecture diagram',
+        caption: 'Component structure showing the modular architecture'
+      },
+      {
+        type: 'text',
+        content: 'The project card system is built with reusability in mind. Each project is defined in a central data file, making it easy to add new projects without touching the component code.'
+      },
+      {
+        type: 'heading',
+        content: 'Challenges & Solutions'
+      },
+      {
+        type: 'text',
+        content: 'One of the main challenges was ensuring the floating qubit animations didn\'t interfere with text readability. This was solved by implementing a z-index layering system where content boxes sit above the animated background with semi-transparent black backgrounds and glowing blue borders.'
+      }
+    ]
   }
 ];
