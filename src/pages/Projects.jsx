@@ -1,16 +1,15 @@
+import ProjectCard from '../components/ProjectCard';
+import { projects } from '../data/projects';
 import './Projects.css';
 
 function Projects() {
   return (
     <div className="projects">
       <h1>My Projects</h1>
-      <div className="projects-content">
-        <p>
-          This is where you'll showcase your projects and portfolio pieces.
-        </p>
-        <p>
-          You can add project cards, descriptions, technologies used, and links to live demos or repositories.
-        </p>
+      <div className="projects-grid">
+        {projects.map((project) => (
+          <ProjectCard key={project.id} project={project} />
+        ))}
       </div>
     </div>
   );

@@ -4,6 +4,7 @@ import QubitBackground from './components/QubitBackground';
 import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
+import ProjectDetail from './pages/ProjectDetail';
 import './App.css';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/:projectId" element={<ProjectDetail />} />
         </Routes>
       </div>
     </Router>

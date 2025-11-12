@@ -4,12 +4,12 @@ function Home() {
   return (
     <div className="home">
       <section className="intro">
-        <h1>Welcome to My Portfolio</h1>
+        <h1>Welcome to My Website!</h1>
         <p className="intro-text">
-          Hi! I'm [Your Name], a passionate developer creating amazing web experiences.
+          Hi! I'm Sean, a passionate reasercher interested in the intersection between Quantum Physics and cutting edge algorithms.
         </p>
         <p className="intro-description">
-          This is my personal space where I share my projects, skills, and journey in web development.
+          This is my personal space where I share my projects, skills, and journey as I progress in my academic career.
           Feel free to explore and get to know more about my work.
         </p>
         <div className="cta-buttons">
