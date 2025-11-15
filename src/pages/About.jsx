@@ -9,7 +9,7 @@ function About() {
           Hi 👋, my name is Sean, I'm currently a student here in the U.S. studying physics with a focus on quantum computing and quantum algorithms.
         </p>
         <p>
-          Add information about your experience, education, and interests here.
+          Just go checkout my projects or something, i'm not that interesting.
         </p>
       </div>
 

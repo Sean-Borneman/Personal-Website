@@ -1,7 +1,8 @@
 // Import images
 import sspAlgorithm from '../assets/projects/SSP-algorithm.png';
 import websiteImage from '../assets/projects/Website-picture.png';
-
+import hexRay1 from '../assets/projects/HexRay1.png';
+import hexRay2 from '../assets/projects/HexRay2.png';
 // Add your projects here
 export const projects = [
   {
@@ -11,22 +12,80 @@ export const projects = [
     shortDescription: 'Quantum algorithm for solving the Subset Sum Problem',
     image: sspAlgorithm,
     tags: ['Quantum Computing', 'Python', 'D-Wave'],
-    githubUrl: 'https://github.com/Sean-Borneman',
+    githubUrl: null,
     liveUrl: null,
     paperUrl: 'https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10821198', // Add your paper URL here, e.g., 'https://arxiv.org/abs/1234.5678'
     date: '2024-11'
   },
   {
-    id: 'quantum-simulator',
-    title: 'Quantum Circuit Simulator',
-    description: 'A web-based quantum circuit simulator built with React and quantum computing algorithms.',
-    shortDescription: 'Interactive quantum circuit simulator for educational purposes',
-    image: 'https://via.placeholder.com/400x250/646cff/ffffff?text=Quantum+Simulator',
-    tags: ['React', 'Quantum Computing', 'JavaScript'],
-    githubUrl: 'https://github.com/yourusername/quantum-simulator',
-    liveUrl: 'https://quantum-simulator.example.com',
+    id: 'HeXray',
+    title: 'HeXray',
+    description: 'A web-based decompilation and de-obfuscation program buitl on Ghidra and AI.',
+    shortDescription: 'A web-based decompilation and de-obfuscation program buitl on Ghidra and AI.',
+    image: hexRay1,
+    tags: ['Ghidra', 'C', 'Antropic API', 'React'],
+    githubUrl: 'https://github.com/Sean-Borneman/HexRay',
+    liveUrl: null,
     paperUrl: null,
-    date: '2024-01'
+    date: '2025-09',
+    detailedContent: [
+      {
+        type: 'text',
+        content: 'HexRay, is a web-based decompilation and de-obfuscation tool built on top of Ghidra, enhanced with AI capabilities. It aims to simplify the reverse engineering process by providing an intuitive interface and leveraging machine learning models to assist in code analysis.'
+      },
+      {
+        type: 'heading',
+        content: 'Origins of the Project'
+      },
+      {
+        type: 'text',
+        content: 'HexRaw was started simply as a hackathon project. When I attended my first hackathon, I both didn\'t know how to make web-apps, and, it being the first few months of college, I certinly didnt know anoyone who could teach me. So when I walked into the large lecture hall I had two goals: Find a friend, get a free T-shirt. The latter goal was accomplihsed rather quickly, and after saying hi to the first three people I saw the former was as well.'
+      },      {
+        type: 'text',
+        content: 'Together, our little group of 4 began to brainstorm. Turns out both me and James were passionate about cybersecurity, and as I was a new memeber to our schools CTF team I wanted to do something to prove Iwas at least a little bit capable. James was actually the one to make the suggestion, a tool that could use AI, to decompile binary files for you, thus bypassing the normally tedious process of decompiling, de-obfusctaing and usually re-writing code in order to understand it, thus HeXray was born.'
+      },
+      {
+        type: 'heading',
+        content: 'Approach and Implementation'
+      },
+      {
+        type: 'text',
+        content: 'HexRay is built on a React frontend with a python backend. The backend uses the Ghidra CLI to autmatically decompile uploaded binary files. Once the decompilation is complete, the code is sent to an AI model via the Antropic API, which is told to de-obfuscate and explain the code. The Results are then rendered back to the user.'
+      },
+      {
+        type: 'image',
+        src: hexRay1,
+        alt: 'An Image of the HexRay UI',
+        caption: 'Base IU interface of HeXray showing the upload process'
+      },
+      {
+        type: 'text',
+        content: 'A key chellenge we faced during development was ensuring the AI-generated, de-obfusctated code was accurate and wasnt just halluniations from the model. To address this, we spent several hours implementing a compiler (CMake) into the python backend. The idea was that after the AI generated the de-obfuscated code, we could compile it, and test its behavoir against the binary it order to definitivley tell if something had changed. \n We didn\'t fully finish this feature, during the hackathon we got as far as compiling the code, and returning sucesses (or Lack there of) to the frontend.  '
+          },
+      {
+        type: 'image',
+        src: hexRay2,
+        alt: 'An Image of the HexRay UI',
+        caption: 'Decomplilatioon results from HeXray'
+      },
+      {
+        type: 'text',
+        content: 'We were exteremely happy with how HexRay turned out, it was pretty, functional, and a blast to work on!'
+      },
+      {
+        type: 'heading',
+        content: 'Possible Future Improvements'
+      },
+      {
+        type: 'list',
+        items: [
+          'Re-write the CMake checker to feed back into the AI for better de-obfuscation results',
+          'Fix the Auto-Hack feature becuase occasionally the file is just empty',
+          'Try to improve UX iwth a loading bar, the often several minute wait times were a bit rough',
+          'Compare the Built CMake code to the original binary to ensure 1-to-1 behvaior (this is how the papers we read do it)'
+        ]
+      }
+    ]
   },
   {
     id: 'ml-project',
@@ -38,7 +97,8 @@ export const projects = [
     githubUrl: 'https://github.com/yourusername/ml-dashboard',
     liveUrl: null,
     paperUrl: null,
-    date: '2024-03'
+    date: '2024-03',
+    
   },
   {
     id: 'portfolio-website',
